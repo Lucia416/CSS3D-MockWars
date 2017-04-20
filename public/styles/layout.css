@@ -13,39 +13,62 @@ body{
   }
   30%{
     opacity:1;
-  }
-  89% {
-    opacity: 1;
     transform: scale(1);
+  }
+  59% {
+    opacity: 0;
+    transform: translateZ(-1000em);
+
   }
   100% {
     opacity: 0;
-    transform: translateZ(-1000em);
+
   }
 }
 
 @keyframes spin {
-  0%,15% {
+  0%,5% {
     opacity: 0;
     transform: rotateY(90deg);
   }
-  30% {
+  10% {
     opacity: 1;
   }
-  70%, 80% {
+  20%, 28% {
     transform: rotateY(0);
     opacity: 1;
   }
-  95%, 100% {
+  45%, 50% {
     opacity: 0;
     transform: translateZ(-1000em);
   }
+  100%{
+    opacity: 0;
+  }
+}
+
+@keyframes introduction {
+  0%,30%{
+    opacity:0;
+    transform: scale(1) translateZ(3em) rotateX(60deg);
+  }
+  31%{
+    opacity:1;
+    transform: translateZ(3em)  rotateX(60deg);
+  }
+
+  100%{
+    opacity:0;
+    transform: translateZ(-80em) rotateX(60deg);
+
+  }
+
 }
 
 
 .lucia, .threeD{
 
-  animation: introAnimation 5s ease-out infinite;
+  animation: introAnimation 30s ease-out infinite;
 }
 .lucia{
   margin-top: 100px;
@@ -53,6 +76,7 @@ body{
   margin-right: 400px;
 }
 .threeD{
+  margin-top: 100px;
   margin-left:575px;
   margin-right:575px;
 }
@@ -68,25 +92,33 @@ body{
 }
 
 span{
-  animation: spin 5s ease-out infinite;
+  animation: spin 30s ease-out infinite;
   display: inline-block;
 
 }
 
-#interactiveDesigner{
+#interactive{
   margin-top: 0;
-  margin-left: 380px;
-  margin-bottom: 50px;
-  font-size: 2em;
+  margin-left: 420px;
+  font-size: 1.8em;
   letter-spacing: 0.4em;
+  height:50px;
+  width:620px;
 
+}
 
-
+.description{
+  margin-left: 170px;
+  width:1000px;
+  position:absolute;
+  top:150px;
+  transform: rotateX(60deg);
+  animation: introduction 30s ease-in-out infinite;
+  transform-style: preserve-3d;
+  overflow: hidden;
 }
 
 .intro{
   transform-style: preserve-3d;
-  perspective: 1000px;
-
-
+  perspective: 500px;
 }

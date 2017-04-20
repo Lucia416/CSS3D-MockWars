@@ -11,16 +11,20 @@
           <div class='lucia'>
             <img id='lu' src = "./styles/images/Lucia.svg" alt="Lucia"/>
           </div>
-          <h2 id="interactiveDesigner">INTERACTIVE DESIGNER</h2>
+            <div id="interactive">INTERACTIVE DESIGNER  FRONT-END DEVELOPER    3D VISUAL ARTIST
+            </div>
           <div class='threeD'>
             <img id='tD' src = "./styles/images/3D.svg" alt="threeD"/>
+          </div>
+          <div class='description'>
+            <img id='desc' src = "./styles/images/introduction.svg" alt="Lucia"/>
           </div>
 
         </div>
           <script>
-            var interactiveDesigner = document.getElementById('interactiveDesigner');
-            var interactiveText = interactiveDesigner.innerHTML;
-            interactiveDesigner.innerHTML = '';
+            var interactive = document.getElementById('interactive');
+            var interactiveText = interactive.innerHTML;
+            interactive.innerHTML = '';
             var everyLetter = interactiveText.split('');
 
 
@@ -31,10 +35,10 @@
                 span = document.createElement("span");
                 singleLetter = document.createTextNode(everyLetter[i]);
                 if(everyLetter[i] === ' ') {
-                  interactiveDesigner.appendChild(singleLetter);
+                  interactive.appendChild(singleLetter);
                 } else {
                       span.appendChild(singleLetter);
-                      interactiveDesigner.appendChild(span);
+                      interactive.appendChild(span);
                 }
               }
           </script>
