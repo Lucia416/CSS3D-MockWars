@@ -4,16 +4,39 @@
     	<meta charset="utf-8">
     	<title>Intro</title>
       <link rel="stylesheet" href="./styles/layout.css" type="text/css" />
+      <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
     </head>
       <body>
         <div class= "intro">
           <div class='lucia'>
             <img id='lu' src = "./styles/images/Lucia.svg" alt="Lucia"/>
           </div>
+          <h2 id="interactiveDesigner">INTERACTIVE DESIGNER</h2>
           <div class='threeD'>
             <img id='tD' src = "./styles/images/3D.svg" alt="threeD"/>
           </div>
-          <h2 class="interactiveDesigner" id="interactiveDesigner">Interactive Designer</h2>
+
         </div>
+          <script>
+            var interactiveDesigner = document.getElementById('interactiveDesigner');
+            var interactiveText = interactiveDesigner.innerHTML;
+            interactiveDesigner.innerHTML = '';
+            var everyLetter = interactiveText.split('');
+
+
+              var span;
+              var singleletter;
+
+              for(i = 0; i < everyLetter.length; i++){
+                span = document.createElement("span");
+                singleLetter = document.createTextNode(everyLetter[i]);
+                if(everyLetter[i] === ' ') {
+                  interactiveDesigner.appendChild(singleLetter);
+                } else {
+                      span.appendChild(singleLetter);
+                      interactiveDesigner.appendChild(span);
+                }
+              }
+          </script>
       </body>
   </html>
