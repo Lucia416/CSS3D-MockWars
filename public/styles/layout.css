@@ -50,19 +50,20 @@ body{
 @keyframes introduction {
   0%,30%{
     opacity:0;
-    transform: scale(1) translateZ(3em) rotateX(60deg);
+    transform:translateZ(35em) rotateX(60deg);
   }
   31%{
     opacity:1;
-    transform: translateZ(3em)  rotateX(60deg);
+    transform: translateZ(35em)  rotateX(60deg);
   }
-
+  80%{
+    opacity:1;
+  }
   100%{
     opacity:0;
-    transform: translateZ(-80em) rotateX(60deg);
+    transform: translateZ(-90em) rotateX(60deg);
 
   }
-
 }
 
 
@@ -115,8 +116,11 @@ span{
   transform: rotateX(60deg);
   animation: introduction 30s ease-in-out infinite;
   transform-style: preserve-3d;
-  overflow: hidden;
+  overflow:hidden;
+
+
 }
+
 
 .intro{
   transform-style: preserve-3d;
