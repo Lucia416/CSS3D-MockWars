@@ -1,0 +1,50 @@
+body{
+  background-image: url('./images/background.jpg');
+}
+@keyframes introAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(1.5) translateY(-0.75em);
+  }
+  20% {
+    opacity: 1;
+  }
+  89% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateZ(-1000em);
+  }
+}
+
+.lucia, .threeD{
+
+  animation: introAnimation 10s ease-out infinite;
+}
+.lucia{
+  margin-top: 100px;
+  margin-left: 400px;
+  margin-right: 400px;
+}
+.threeD{
+  margin-left:575px;
+  margin-right:575px;
+}
+
+#lu{
+  height:200px;
+  width:600px;
+}
+
+#tD{
+  height:200px;
+  width:250px;
+}
+
+.intro{
+  transform-style: preserve-3d;
+  perspective: 1000px;
+
+}
